@@ -117,4 +117,7 @@ def main():
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == '__main__':
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    print(f"Starting bot on port {port}")
     main()
